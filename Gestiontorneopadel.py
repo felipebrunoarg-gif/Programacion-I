@@ -2,10 +2,23 @@ import json
 
 def cargar_jugadores():
     jugadores = []
-    cantidad = int(input("¿Cuántos jugadores van a participar en el torneo? "))
+    
+    cantidad_str = input("¿Cuántos jugadores van a participar en el torneo? (Debe ser un número par): ")
+    while not cantidad_str.isdigit() or int(cantidad_str) <= 0 or int(cantidad_str) % 2 != 0:
+        print("Error: La cantidad debe ser un número entero positivo y par para poder armar parejas.")
+        cantidad_str = input("¿Cuántos jugadores van a participar en el torneo? (Debe ser un número par): ")
+    
+    cantidad = int(cantidad_str)
+    
     for i in range(cantidad):
         nombre = input(f"Ingrese el nombre del jugador {i + 1}: ")
-        categoria = input(f"Ingrese la categoría del jugador {i + 1} (por ejemplo, 4ª, 5ª o 6ª): ")
+        
+        categoria_str = input(f"Ingrese la categoría del jugador {i + 1} (por ejemplo, 4ª, 5ª o 6ª): ")
+        while not categoria_str.isdigit():
+            print("Error: Debe ingresar un número entero.")
+            categoria_str = input(f"Ingrese la categoría del jugador {i + 1} (por ejemplo, 4ª, 5ª o 6ª): ")
+        
+        categoria = int(categoria_str)
         jugadores.append({"nombre": nombre, "categoria": categoria})
     return jugadores
 
@@ -48,5 +61,4 @@ def main():
     print("\nLos jugadores se guardaron en jugadores.json")
     print("Las parejas se guardaron en parejas.json")
 
-if __name__ == "__main__":
-    main()
+main()
