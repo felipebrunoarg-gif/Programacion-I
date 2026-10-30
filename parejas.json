@@ -1,28 +1,44 @@
 [
     {
-        "nombre": "Mascapitos",
+        "nombre": "Los tanos",
         "jugadores": [
             {
-                "nombre": "Juan",
-                "categoria": "1"
+                "nombre": "Martin Gomez",
+                "categoria": 5
             },
             {
-                "nombre": "Reguera",
-                "categoria": "1"
+                "nombre": "Lucas Peralta",
+                "categoria": 5
             }
-        ]
+        ],
+        "puntos": 6
     },
     {
-        "nombre": "Cracks",
+        "nombre": "Las Leonas ",
         "jugadores": [
             {
-                "nombre": "Koko",
-                "categoria": "1"
+                "nombre": "Sofia Ruiz",
+                "categoria": 4
             },
             {
-                "nombre": "Felipe",
-                "categoria": "1"
+                "nombre": "Valentina Sosa",
+                "categoria": 4
             }
-        ]
+        ],
+        "puntos": 9
+    },
+    {
+        "nombre": "Doble Falta ",
+        "jugadores": [
+            {
+                "nombre": "Diego Acosta",
+                "categoria": 6
+            },
+            {
+                "nombre": "Camila Diaz",
+                "categoria": 6
+            }
+        ],
+        "puntos": 3
     }
 ]
