@@ -1,0 +1,11 @@
+# Grafo reestructurado aciclico G' - LOGIX AUTONOMOUS (9 modulos, 13 arcos)
+# Se elimina INV -> ROB y se invierte SEG -> ASG en ASG -> SEG mediante bus de eventos
+PED: CLI, INV, ASG
+CLI: NINGUNA
+INV: NINGUNA
+ROB: INV
+ASG: INV, RUT, SEG
+RUT: SEG
+SEG: NINGUNA
+ENT: PED, SEG
+REP: PED, INV, ENT

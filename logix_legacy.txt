@@ -1,0 +1,11 @@
+# Grafo original de dependencias LOGIX (9 modulos, 14 arcos)
+# Formato: MODULO: DEP1, DEP2, ... (o NINGUNA si no depende de nadie)
+PED: CLI, INV, ASG
+CLI: NINGUNA
+INV: ROB
+ROB: INV
+ASG: INV, RUT
+RUT: SEG
+SEG: ASG
+ENT: PED, SEG
+REP: PED, INV, ENT
